@@ -9,6 +9,15 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send(`
+    <h2>📬 Welcome to the Resilient Email Service API</h2>
+    <p>Use <code>POST /send</code> to send emails via fallback providers.</p>
+    <p>Service is up and running ✅</p>
+  `);
+});
+
+
 // Rate-limited POST endpoint to send emails
 app.post('/send', rateLimiter, async (req, res) => {
   const { to, subject, body } = req.body;
