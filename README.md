@@ -32,16 +32,14 @@ A fault-tolerant and scalable **Email Sending API** built with **Node.js**, **Ex
 ```
 email-service/
 │
-├── controllers/         # Business logic for email sending
 ├── providers/           # Pluggable email provider modules
 ├── middlewares/         # Rate limiting, validation, etc.
 ├── models/              # MongoDB schemas
-├── routes/              # API route definitions
-├── utils/               # Helpers: retry, logger, etc.
+├── service/             # email-service logic here
 ├── tests/               # Jest unit tests
 ├── .env                 # Environment configuration
 ├── app.js               # Express app setup
-├── server.js            # Application entry point
+├── index.js             # Application entry point
 └── README.md            # This file
 ```
 
